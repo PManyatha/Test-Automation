@@ -1,0 +1,35 @@
+plugins {
+
+    id 'application'
+}
+
+repositories {
+
+    mavenCentral()
+}
+
+dependencies {
+    // Use TestNG framework, also requires calling test.useTestNG() below
+    testImplementation 'org.testng:testng:7.5.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.10.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.4.1'
+    // https://mvnrepository.com/artifact/com.opencsv/opencsv
+    implementation group: 'com.opencsv', name: 'opencsv', version: '5.9'
+
+
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+tasks.named('test') {
+
+    useTestNG {
+        suites 'src/test/resources/testng.xml'
+        outputDirectory = file("test-output")
+        useDefaultListeners = true
+    }
+}
