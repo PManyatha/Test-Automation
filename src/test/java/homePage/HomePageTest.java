@@ -33,4 +33,14 @@ public class HomePageTest extends BaseTest {
            Assert.assertEquals(carouse.size(), expectedSize);
            System.out.println("Carousel slides Size:" + carouse.size());
        }
+
+       @Test
+       public void category(){
+        HomePage homePage = HomePage.getInstance(driver);
+        List<WebElement> category = homePage.getCategory();
+        int expectedSize = 3;
+        Assert.assertEquals(category.size(), expectedSize);
+        System.out.println("Category Size:" + category.size());
+       }
+
     }

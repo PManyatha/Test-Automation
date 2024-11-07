@@ -41,4 +41,8 @@ public class HomePage {
         return findElements.getElementsByXPath("//div[@class='item']");
     }
 
+    public List<WebElement> getCategory(){
+        return findElements.getElementsByXPath("//div[@class='panel panel-default']");
+    }
+
 }
