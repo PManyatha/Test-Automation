@@ -45,4 +45,7 @@ public class HomePage {
         return findElements.getElementsByXPath("//div[@class='panel panel-default']");
     }
 
+    public List<WebElement> getBrands(){
+        return findElements.getElementsByXPath("//ul[@class='nav nav-pills nav-stacked']/li");
+    }
 }

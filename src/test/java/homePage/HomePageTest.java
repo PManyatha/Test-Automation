@@ -43,4 +43,13 @@ public class HomePageTest extends BaseTest {
         System.out.println("Category Size:" + category.size());
        }
 
+       @Test
+       public void brands(){
+        HomePage homePage = HomePage.getInstance(driver);
+        List<WebElement> brands = homePage.getBrands();
+        int expectedSize = 8;
+        Assert.assertEquals(brands.size(), expectedSize);
+           System.out.println("Brands Size:" + brands.size());
+       }
+
     }
