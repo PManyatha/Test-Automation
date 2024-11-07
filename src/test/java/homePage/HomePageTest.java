@@ -61,4 +61,18 @@ public class HomePageTest extends BaseTest {
         System.out.println("Featured items Size:" + items.size());
        }
 
+       @Test
+       public void subscription(){
+        HomePage homePage = HomePage.getInstance(driver);
+        homePage.scroll();
+        WebElement subscriptionTextbox = homePage.getSubscriptionTextbox();
+        WebElement submitButton = homePage.getSubmitButton();
+
+        Assert.assertNotNull(subscriptionTextbox);
+        Assert.assertNotNull(submitButton);
+        System.out.println("Subscription textbox and submit button are present in the footer.");
+
+
+       }
+
     }

@@ -52,4 +52,20 @@ public class HomePage {
     public List<WebElement> getFeaturedItems() {
         return findElements.getElementsByXPath("//div[@class='product-image-wrapper']");
     }
+
+    public void scroll(){
+        WebElement element = findElements.ByCSS("#footer > div.footer-widget > div > div > div.col-sm-3.col-sm-offset-1 > div > h2");
+        actions.scrollWindow(element);
+    }
+
+    public WebElement getSubscriptionTextbox() {
+        return findElements.ByCSS("#susbscribe_email"); // Adjust selector as needed
+    }
+
+    public WebElement getSubmitButton() {
+        return findElements.ByCSS("#subscribe"); // Adjust selector as needed
+    }
+
+
+
 }
