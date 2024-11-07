@@ -4,7 +4,7 @@ import HomePage.shared.Actions;
 import HomePage.shared.FindElements;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
+
 import java.util.List;
 
 public class HomePage {

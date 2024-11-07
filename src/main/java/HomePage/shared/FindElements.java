@@ -47,6 +47,12 @@ public class FindElements {
         return driver.findElements(By.xpath(xpathLocator));
     }
 
+    public List<WebElement> getElementsByClass(String classLocator) {
+        return driver.findElements(By.className(classLocator));
+    }
+
+
+
     public WebElement ByPartialLinkText(String text) {
         return driver.findElement(By.partialLinkText(text));
     }
