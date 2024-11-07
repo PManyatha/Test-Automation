@@ -36,4 +36,9 @@ public class HomePage {
         }
         return result;
     }
+
+    public List<WebElement> getCarouselSlides() {
+        return findElements.getElementsByXPath("//div[@class='item']");
+    }
+
 }

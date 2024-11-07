@@ -1,8 +1,11 @@
 package homePage;
 
 import HomePage.pages.HomePage;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class HomePageTest extends BaseTest {
 
@@ -20,4 +23,14 @@ public class HomePageTest extends BaseTest {
                 System.out.println("Actual title: " + actualTitle[i] + "\nExpected title: " + expectedTitle[i]);
             }
         }
+
+       @Test
+       public void carouselSlides(){
+        HomePage homePage = HomePage.getInstance(driver);
+           List<WebElement> carouse = homePage.getCarouselSlides();
+
+           int expectedSize = 3;
+           Assert.assertEquals(carouse.size(), expectedSize);
+           System.out.println("Carousel slides Size:" + carouse.size());
+       }
     }
