@@ -25,11 +25,14 @@ java {
     }
 }
 
-tasks.named('test') {
-
-    useTestNG {
-        suites 'src/test/resources/testng.xml'
-        outputDirectory = file("test-output")
-        useDefaultListeners = true
-    }
+//tasks.named('test') {
+//
+//    useTestNG {
+//        suites 'src/test/resources/testng.xml'
+//        outputDirectory = file("test-output")
+//        useDefaultListeners = true
+//    }
+//}
+test {
+    useTestNG()
 }

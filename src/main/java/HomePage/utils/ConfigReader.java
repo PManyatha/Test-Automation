@@ -2,7 +2,7 @@ package HomePage.utils;
 
 
 public class ConfigReader {
-    private static final String baseURL = "https://demo.openmrs.org/openmrs/login.htm";
+    private static final String baseURL = "https://automationexercise.com/";
     private static final String browser = "chrome";
 
     public static String getBrowser() {

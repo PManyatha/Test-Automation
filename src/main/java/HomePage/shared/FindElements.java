@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class FindElements {
     private static FindElements elements = null;
     WebDriver driver;
@@ -35,6 +37,14 @@ public class FindElements {
 
     public WebElement ByXPath(String xpath) {
         return driver.findElement(By.xpath(xpath));
+    }
+
+    public List<WebElement> getElementsByCSS(String cssLocator) {
+        return driver.findElements(By.cssSelector(cssLocator));
+    }
+
+    public List<WebElement> getElementsByXPath(String xpathLocator) {
+        return driver.findElements(By.xpath(xpathLocator));
     }
 
     public WebElement ByPartialLinkText(String text) {

@@ -1,7 +1,7 @@
 package homePage;
 
-import homePage.shared.PageWaits;
-import homePage.utils.*;
+import HomePage.shared.PageWaits;
+import HomePage.utils.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
