@@ -52,4 +52,13 @@ public class HomePageTest extends BaseTest {
            System.out.println("Brands Size:" + brands.size());
        }
 
+       @Test
+        public void featuresItems(){
+        HomePage homePage = HomePage.getInstance(driver);
+        List<WebElement> items = homePage.getFeaturedItems();
+        int minProductCount = 1;
+        Assert.assertTrue(items.size()>= minProductCount);
+        System.out.println("Featured items Size:" + items.size());
+       }
+
     }

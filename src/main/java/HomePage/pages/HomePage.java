@@ -48,4 +48,8 @@ public class HomePage {
     public List<WebElement> getBrands(){
         return findElements.getElementsByXPath("//ul[@class='nav nav-pills nav-stacked']/li");
     }
+
+    public List<WebElement> getFeaturedItems() {
+        return findElements.getElementsByXPath("//div[@class='product-image-wrapper']");
+    }
 }
